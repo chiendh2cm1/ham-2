@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        } else if (number === 2) {
+            return true;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    function Countprime() {
+        let n = prompt("số lượng số nguyên tố cần viết:")
+        let N = 2;
+        let count;
+        let display = ""
+        for (count = 0; count<n;){
+            if (isPrime(N)===true) {
+                count++
+            display =display + N + " ";
+            }
+            N++
+        }
+        alert(display)
+    }
+    Countprime();
+</script>
+</body>
+</html>

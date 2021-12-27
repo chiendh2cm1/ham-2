@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập chuỗi cần kiểm tra");
+    let array = str.split('');
+
+    function isPalindrome(arr) {
+        let first = 0;
+        let last = arr.length - 1;
+        while (last > first) {
+            if (arr[first] !== arr[last]) {
+                return false;
+            }
+            first++;
+            last--;
+        }
+        return true;
+    }
+
+    console.log(isPalindrome(array))
+
+    // function Palindrome(arr) {
+    //     for (i = 0; i < arr.length; i++) {
+    //         if (arr[i] === arr[arr.length - 1]) {
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    // }
+    // function isPalindrom(arr) {
+    //     if (Palindrome(arr)){
+    //         return true;
+    //     }else {
+    //         return false
+    //     }
+    // }
+    // console.log(isPalindrom(array))
+</script>
+</body>
+</html>
